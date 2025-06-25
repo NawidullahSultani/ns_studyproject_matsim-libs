@@ -20,7 +20,7 @@ public class BWCMergeNetworksWithSuffix {
 		String carNetworkFile = "study_project/input/network/car-bike-network.xml.gz";
 		String walkBikeNetworkFile = "study_project/input/network/bike-walk-network.xml.gz";
 		String walkOnlyNetworkFile = "study_project/input/network/walk-only-network.xml.gz"; // new walk-only network file
-		String outputMergedNetwork = "study_project/input/network/BWC-network.xml.gz";
+		String outputMergedNetwork = "study_project/input/network/bike-walk-car-network-01.xml.gz";
 
 		Config config = ConfigUtils.createConfig();
 

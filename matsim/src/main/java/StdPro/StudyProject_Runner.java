@@ -10,8 +10,10 @@ import org.matsim.core.controler.Controler;
 import org.matsim.core.controler.OutputDirectoryHierarchy;
 import org.matsim.core.population.routes.GenericRouteFactory;
 import org.matsim.core.population.routes.LinkNetworkRouteFactory;
+import org.matsim.core.population.routes.NetworkRoute;
 import org.matsim.core.population.routes.RouteFactories;
 import org.matsim.core.replanning.strategies.DefaultPlanStrategiesModule;
+import org.matsim.core.replanning.strategies.ReRoute;
 import org.matsim.core.scenario.ScenarioUtils;
 import org.matsim.pt.config.TransitConfigGroup;
 import java.util.Set;
@@ -25,13 +27,13 @@ public class StudyProject_Runner {
 		config.global().setCoordinateSystem("EPSG:31468");
 
 		// 2. INPUT FILES
-		config.network().setInputFile("study_project/input/network/multimodal-BWC-PT-network.xml.gz");
-		config.plans().setInputFile("study_project/input/StdPro_Plan.xml");
+		config.network().setInputFile("study_project/multimodal-input/multimodal-mapped-network-01.xml.gz");
+		config.plans().setInputFile("study_project/multimodal-input/synthetic-plan-01.xml");
 
 		// 3. TRANSIT CONFIGURATION
 		config.transit().setUseTransit(true);
-		config.transit().setTransitScheduleFile("study_project/multimodal_input/mapped-BWCPT-schedule.xml");
-		config.transit().setVehiclesFile("study_project/multimodal_input/BWCPT-Vehicle.xml");
+		config.transit().setTransitScheduleFile("study_project/multimodal-input/pt-mapped-schedule-01.xml");
+		config.transit().setVehiclesFile("study_project/multimodal-input/pt-vehicle-01.xml");
 		config.transit().setTransitModes(Set.of(TransportMode.pt, "subway"));
 		config.transit().setRoutingAlgorithmType(TransitConfigGroup.TransitRoutingAlgorithmType.SwissRailRaptor);
 
@@ -41,12 +43,20 @@ public class StudyProject_Runner {
 		config.transitRouter().setExtensionRadius(1000);
 		config.transitRouter().setAdditionalTransferTime(0);
 
+		config.routing().addModeRoutingParams(
+			new RoutingConfigGroup.ModeRoutingParams("non_network_walk")
+				.setBeelineDistanceFactor(1.3)
+				.setTeleportedModeSpeed(1.34)
+		);
+
+
 		// 5. NETWORK AND SIMULATION MODES
-		config.routing().setNetworkModes(Set.of("car"));
-		config.qsim().setMainModes(Set.of("car", "subway"));
+		config.routing().setNetworkModes(Set.of("car", "walk", "bike", "non_network_walk"));
+		config.qsim().setMainModes(Set.of("car", "subway", "walk", "bike", "non_network_walk"));
 		config.routing().clearTeleportedModeParams();
 		config.routing().setRoutingRandomness(0.0);
 		config.routing().setNetworkRouteConsistencyCheck(RoutingConfigGroup.NetworkRouteConsistencyCheck.disable);
+		config.routing().setAccessEgressType(RoutingConfigGroup.AccessEgressType.accessEgressModeToLink);
 
 		// 6. SIMULATION TIME SETTINGS
 		config.qsim().setStartTime(0);
@@ -62,11 +72,11 @@ public class StudyProject_Runner {
 		config.routing().setAccessEgressType(
 			RoutingConfigGroup.AccessEgressType.accessEgressModeToLink);
 
-		// Teleported modes
-		RoutingConfigGroup.TeleportedModeParams walk = new RoutingConfigGroup.TeleportedModeParams("walk");
-		walk.setBeelineDistanceFactor(1.3);
-		walk.setTeleportedModeSpeed(5/3.6);
-		config.routing().addTeleportedModeParams(walk);
+
+		RoutingConfigGroup.TeleportedModeParams transitWalk = new RoutingConfigGroup.TeleportedModeParams("transit_walk");
+		transitWalk.setBeelineDistanceFactor(1.3);
+		transitWalk.setTeleportedModeSpeed(5.0 / 3.6);
+		config.routing().addTeleportedModeParams(transitWalk);
 
 		// 8. SCORING PARAMETERS
 		config.scoring().setLearningRate(1);
@@ -127,8 +137,14 @@ public class StudyProject_Runner {
 		timeMutator.setWeight(0.3);
 		config.replanning().addStrategySettings(timeMutator);
 
+		config.replanning().addStrategySettings(
+			new ReplanningConfigGroup.StrategySettings()
+				.setStrategyName(DefaultPlanStrategiesModule.DefaultStrategy.ReRoute)
+				.setWeight(0.1)
+		);
+
 		// 11. OUTPUT CONTROL
-		config.controller().setOutputDirectory("study_project/output");
+		config.controller().setOutputDirectory("study_project/output-01");
 		config.controller().setFirstIteration(0);
 		config.controller().setLastIteration(3);
 		config.controller().setOverwriteFileSetting(
@@ -136,7 +152,19 @@ public class StudyProject_Runner {
 
 		// 12. SCENARIO AND CONTROLER SETUP
 		Scenario scenario = ScenarioUtils.loadScenario(config);
+
+// Ensure NetworkRoute is used for car, walk, bike
+		RouteFactories routeFactories = scenario.getPopulation().getFactory().getRouteFactories();
+		routeFactories.setRouteFactory(NetworkRoute.class, new LinkNetworkRouteFactory());
+
 		Controler controler = new Controler(scenario);
+
+		controler.addOverridingModule(new AbstractModule() {
+			@Override
+			public void install() {
+				addPlanStrategyBinding("ReRoute").toProvider(new ReRoute());
+			}
+		});
 
 		controler.run();
 	}

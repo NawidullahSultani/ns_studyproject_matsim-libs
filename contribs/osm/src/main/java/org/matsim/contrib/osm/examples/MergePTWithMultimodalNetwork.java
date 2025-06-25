@@ -15,9 +15,9 @@ import org.matsim.core.config.ConfigUtils;
 public class MergePTWithMultimodalNetwork {
 
 	public static void main(String[] args) {
-		String ptNetworkFile = "study_project/input/clean_network/mapped-PT-network.xml.gz";
-		String multimodalNetworkFile = "study_project/input/network/BWC-network.xml.gz";
-		String outputMergedNetwork = "study_project/input/network/multimodal-BWC-PT-network.xml.gz";
+		String ptNetworkFile = "study_project/input/network/mapped-pt-network-01.xml.gz";
+		String multimodalNetworkFile = "study_project/input/network/bike-walk-car-network-01.xml.gz";
+		String outputMergedNetwork = "study_project/multimodal-input/multimodal-mapped-network-01.xml.gz";
 
 		Config config = ConfigUtils.createConfig();
 
