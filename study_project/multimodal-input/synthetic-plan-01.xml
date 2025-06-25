@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE population SYSTEM "http://www.matsim.org/files/dtd/population_v6.dtd">
+
+<population>
+
+	<!-- Person 1: Car only -->
+	<person id="person_car">
+		<plan selected="yes">
+			<activity type="HOME" x="4468653.237" y="5334120.472" end_time="08:00:00" />
+			<leg mode="subway" />
+			<activity type="WORK" x="4469477.455" y="5335916.47" end_time="17:00:00" />
+			<leg mode="subway" />
+			<activity type="HOME" x="4468653.237" y="5334120.472" />
+		</plan>
+	</person>
+
+
+	<!-- Person 2: Public transport only -->
+	<person id="person_subway">
+		<plan selected="yes">
+			<activity type="HOME" x="4469143.276" y="5335866.443" end_time="07:30:00" />
+			<leg mode="subway" />
+			<activity type="SCHOOL" x="4469098.518" y="5334591.264" end_time="16:00:00" />
+			<leg mode="subway" />
+			<activity type="HOME" x="4469143.276" y="5335866.443" />
+		</plan>
+	</person>
+
+
+	<!-- Person 4: Car and PT -->
+	<person id="person_car_subway">
+		<plan selected="yes">
+			<activity type="HOME" x="4469370.456" y="5333853.54" end_time="07:00:00" />
+			<leg mode="subway" />
+			<activity type="P+R" x="4469222.845" y="5335388.947" end_time="07:10:00" />
+			<leg mode="subway" />
+			<activity type="WORK" x="4469226.725" y="5336108.934" end_time="17:00:00" />
+			<leg mode="subway" />
+			<activity type="P+R" x="4469222.845" y="5335388.947" end_time="17:20:00" />
+			<leg mode="subway" />
+			<activity type="HOME" x="4469370.456" y="5333853.54" />
+		</plan>
+	</person>
+
+<!--	&lt;!&ndash; Person 3: Walk only &ndash;&gt;-->
+<!--	<person id="person_walk">-->
+<!--		<plan selected="yes">-->
+<!--			<activity type="HOME" x="4469810" y="5333120" end_time="09:00:00" />-->
+<!--			<leg mode="walk" />-->
+<!--			<activity type="SHOP" x="4470210" y="5333080" end_time="10:00:00" />-->
+<!--			<leg mode="walk" />-->
+<!--			<activity type="HOME" x="4469810" y="5333120" />-->
+<!--		</plan>-->
+<!--	</person>-->
+
+<!--	&lt;!&ndash; Person 5: Bike only &ndash;&gt;-->
+<!--	<person id="person_bike">-->
+<!--		<plan selected="yes">-->
+<!--			<activity type="HOME" x="4470310" y="5333070" end_time="08:30:00" />-->
+<!--			<leg mode="bike" />-->
+<!--			<activity type="UNIVERSITY" x="4480010" y="5332520" end_time="15:30:00" />-->
+<!--			<leg mode="bike" />-->
+<!--			<activity type="HOME" x="4470310" y="5333070" />-->
+<!--		</plan>-->
+<!--	</person>-->
+
+</population>
