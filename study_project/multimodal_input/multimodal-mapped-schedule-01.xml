@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE transitSchedule SYSTEM "http://www.matsim.org/files/dtd/transitSchedule_v2.dtd">
+
+<transitSchedule>
+
+	<transitStops>
+		<stopFacility id="115487.link:28" x="4469161.940806485" y="5335470.146769984" linkRefId="28" name="Giselastraße" stopAreaId="135891" isBlocking="false"/>
+		<stopFacility id="176036.link:1185" x="4469154.586658412" y="5335472.299215491" linkRefId="1185" name="Giselastraße" stopAreaId="135891" isBlocking="false"/>
+		<stopFacility id="271358.link:686" x="4469330.037855782" y="5336028.784717471" linkRefId="686" name="Münchner Freiheit" stopAreaId="381906" isBlocking="false"/>
+		<stopFacility id="273255.link:1271" x="4469346.7534412285" y="5336024.469497381" linkRefId="1271" name="Münchner Freiheit" stopAreaId="381906" isBlocking="false"/>
+		<stopFacility id="292942.link:1181" x="4468927.48292724" y="5334755.420489515" linkRefId="1181" name="Universität" stopAreaId="89688" isBlocking="false"/>
+		<stopFacility id="324290.link:1271" x="4469338.060880032" y="5336026.628898458" linkRefId="1271" name="Münchner Freiheit" stopAreaId="381906" isBlocking="false"/>
+		<stopFacility id="347101.link:686" x="4469318.664796971" y="5336030.513754701" linkRefId="686" name="Münchner Freiheit" stopAreaId="381906" isBlocking="false"/>
+		<stopFacility id="650810.link:36" x="4468699.530812714" y="5334016.093935749" linkRefId="36" name="Odeonsplatz" stopAreaId="138970" isBlocking="false"/>
+		<stopFacility id="668951.link:22" x="4468712.163084675" y="5334012.577669583" linkRefId="22" name="Odeonsplatz" stopAreaId="138970" isBlocking="false"/>
+		<stopFacility id="671935.link:24" x="4468934.837918113" y="5334753.267758161" linkRefId="24" name="Universität" stopAreaId="89688" isBlocking="false"/>
+	</transitStops>
+	<transitLine id="16493" name="U3">
+		<transitRoute id="1410453">
+			<transportMode>subway</transportMode>
+			<routeProfile>
+				<stop refId="668951.link:22" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="671935.link:24" arrivalOffset="00:03:30" departureOffset="00:03:30" awaitDeparture="true"/>
+				<stop refId="115487.link:28" arrivalOffset="00:04:50" departureOffset="00:04:50" awaitDeparture="true"/>
+				<stop refId="273255.link:1271" arrivalOffset="00:06:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<route>
+				<link refId="22"/>
+				<link refId="24"/>
+				<link refId="26"/>
+				<link refId="28"/>
+				<link refId="30"/>
+				<link refId="1271"/>
+			</route>
+			<departures>
+				<departure id="1202615_04:24:50" departureTime="04:24:50" vehicleRefId="veh_218_subway"/>
+				<departure id="1304624_04:54:50" departureTime="04:54:50" vehicleRefId="veh_219_subway"/>
+				<departure id="1410453_03:54:50" departureTime="03:54:50" vehicleRefId="veh_220_subway"/>
+				<departure id="247927_25:19:50" departureTime="25:19:50" vehicleRefId="veh_221_subway"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="614140">
+			<transportMode>subway</transportMode>
+			<routeProfile>
+				<stop refId="347101.link:686" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="176036.link:1185" arrivalOffset="00:01:40" departureOffset="00:01:40" awaitDeparture="true"/>
+				<stop refId="292942.link:1181" arrivalOffset="00:03:00" departureOffset="00:03:00" awaitDeparture="true"/>
+				<stop refId="650810.link:36" arrivalOffset="00:04:30" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<route>
+				<link refId="686"/>
+				<link refId="1187"/>
+				<link refId="1185"/>
+				<link refId="1183"/>
+				<link refId="1181"/>
+				<link refId="36"/>
+			</route>
+			<departures>
+				<departure id="1018449_07:38:30" departureTime="07:38:30" vehicleRefId="veh_0_subway"/>
+				<departure id="1058296_11:28:30" departureTime="11:28:30" vehicleRefId="veh_1_subway"/>
+				<departure id="1070546_10:48:30" departureTime="10:48:30" vehicleRefId="veh_2_subway"/>
+				<departure id="10826_17:38:30" departureTime="17:38:30" vehicleRefId="veh_3_subway"/>
+				<departure id="1085405_16:28:30" departureTime="16:28:30" vehicleRefId="veh_4_subway"/>
+				<departure id="1099710_20:08:30" departureTime="20:08:30" vehicleRefId="veh_5_subway"/>
+				<departure id="1103850_16:48:30" departureTime="16:48:30" vehicleRefId="veh_6_subway"/>
+				<departure id="1140108_24:08:30" departureTime="24:08:30" vehicleRefId="veh_7_subway"/>
+				<departure id="1142466_14:38:30" departureTime="14:38:30" vehicleRefId="veh_8_subway"/>
+				<departure id="1170432_13:08:30" departureTime="13:08:30" vehicleRefId="veh_9_subway"/>
+				<departure id="1171243_24:28:30" departureTime="24:28:30" vehicleRefId="veh_10_subway"/>
+				<departure id="1183608_15:08:30" departureTime="15:08:30" vehicleRefId="veh_11_subway"/>
+				<departure id="1205202_22:28:30" departureTime="22:28:30" vehicleRefId="veh_12_subway"/>
+				<departure id="1213027_16:38:30" departureTime="16:38:30" vehicleRefId="veh_13_subway"/>
+				<departure id="1222357_14:18:30" departureTime="14:18:30" vehicleRefId="veh_14_subway"/>
+				<departure id="1228833_09:38:30" departureTime="09:38:30" vehicleRefId="veh_15_subway"/>
+				<departure id="1231634_11:38:30" departureTime="11:38:30" vehicleRefId="veh_16_subway"/>
+				<departure id="125153_21:08:30" departureTime="21:08:30" vehicleRefId="veh_17_subway"/>
+				<departure id="1260188_12:08:30" departureTime="12:08:30" vehicleRefId="veh_18_subway"/>
+				<departure id="1264439_15:28:30" departureTime="15:28:30" vehicleRefId="veh_19_subway"/>
+				<departure id="1268894_18:18:30" departureTime="18:18:30" vehicleRefId="veh_20_subway"/>
+				<departure id="1278293_19:28:30" departureTime="19:28:30" vehicleRefId="veh_21_subway"/>
+				<departure id="1285016_24:48:30" departureTime="24:48:30" vehicleRefId="veh_22_subway"/>
+				<departure id="1309352_20:58:30" departureTime="20:58:30" vehicleRefId="veh_23_subway"/>
+				<departure id="1315100_19:18:30" departureTime="19:18:30" vehicleRefId="veh_24_subway"/>
+				<departure id="1318116_17:48:30" departureTime="17:48:30" vehicleRefId="veh_25_subway"/>
+				<departure id="1319840_09:58:30" departureTime="09:58:30" vehicleRefId="veh_26_subway"/>
+				<departure id="1362648_04:42:30" departureTime="04:42:30" vehicleRefId="veh_27_subway"/>
+				<departure id="1373080_05:18:30" departureTime="05:18:30" vehicleRefId="veh_28_subway"/>
+				<departure id="1387919_03:42:30" departureTime="03:42:30" vehicleRefId="veh_29_subway"/>
+				<departure id="1388263_15:58:30" departureTime="15:58:30" vehicleRefId="veh_30_subway"/>
+				<departure id="1388512_10:38:30" departureTime="10:38:30" vehicleRefId="veh_31_subway"/>
+				<departure id="1395858_17:58:30" departureTime="17:58:30" vehicleRefId="veh_32_subway"/>
+				<departure id="1401204_17:08:30" departureTime="17:08:30" vehicleRefId="veh_33_subway"/>
+				<departure id="1404624_09:48:30" departureTime="09:48:30" vehicleRefId="veh_34_subway"/>
+				<departure id="1447058_06:38:30" departureTime="06:38:30" vehicleRefId="veh_35_subway"/>
+				<departure id="1449832_07:58:30" departureTime="07:58:30" vehicleRefId="veh_36_subway"/>
+				<departure id="1471088_08:38:30" departureTime="08:38:30" vehicleRefId="veh_37_subway"/>
+				<departure id="1472007_22:48:30" departureTime="22:48:30" vehicleRefId="veh_38_subway"/>
+				<departure id="147868_10:08:30" departureTime="10:08:30" vehicleRefId="veh_39_subway"/>
+				<departure id="1517316_10:58:30" departureTime="10:58:30" vehicleRefId="veh_40_subway"/>
+				<departure id="154141_22:08:30" departureTime="22:08:30" vehicleRefId="veh_41_subway"/>
+				<departure id="191958_04:12:30" departureTime="04:12:30" vehicleRefId="veh_42_subway"/>
+				<departure id="215777_23:28:30" departureTime="23:28:30" vehicleRefId="veh_43_subway"/>
+				<departure id="220992_08:58:30" departureTime="08:58:30" vehicleRefId="veh_44_subway"/>
+				<departure id="221413_06:18:30" departureTime="06:18:30" vehicleRefId="veh_45_subway"/>
+				<departure id="227967_20:18:30" departureTime="20:18:30" vehicleRefId="veh_46_subway"/>
+				<departure id="233149_06:58:30" departureTime="06:58:30" vehicleRefId="veh_47_subway"/>
+				<departure id="257828_23:58:30" departureTime="23:58:30" vehicleRefId="veh_48_subway"/>
+				<departure id="26568_21:38:30" departureTime="21:38:30" vehicleRefId="veh_49_subway"/>
+				<departure id="287567_25:07:30" departureTime="25:07:30" vehicleRefId="veh_50_subway"/>
+				<departure id="304109_19:48:30" departureTime="19:48:30" vehicleRefId="veh_51_subway"/>
+				<departure id="316875_13:58:30" departureTime="13:58:30" vehicleRefId="veh_52_subway"/>
+				<departure id="321545_18:48:30" departureTime="18:48:30" vehicleRefId="veh_53_subway"/>
+				<departure id="33088_12:18:30" departureTime="12:18:30" vehicleRefId="veh_54_subway"/>
+				<departure id="365985_17:28:30" departureTime="17:28:30" vehicleRefId="veh_55_subway"/>
+				<departure id="379677_19:58:30" departureTime="19:58:30" vehicleRefId="veh_56_subway"/>
+				<departure id="402960_23:08:30" departureTime="23:08:30" vehicleRefId="veh_57_subway"/>
+				<departure id="41893_12:58:30" departureTime="12:58:30" vehicleRefId="veh_58_subway"/>
+				<departure id="429956_21:58:30" departureTime="21:58:30" vehicleRefId="veh_59_subway"/>
+				<departure id="43598_21:28:30" departureTime="21:28:30" vehicleRefId="veh_60_subway"/>
+				<departure id="448196_14:58:30" departureTime="14:58:30" vehicleRefId="veh_61_subway"/>
+				<departure id="467232_18:08:30" departureTime="18:08:30" vehicleRefId="veh_62_subway"/>
+				<departure id="468527_17:18:30" departureTime="17:18:30" vehicleRefId="veh_63_subway"/>
+				<departure id="481343_20:38:30" departureTime="20:38:30" vehicleRefId="veh_64_subway"/>
+				<departure id="486965_11:48:30" departureTime="11:48:30" vehicleRefId="veh_65_subway"/>
+				<departure id="498700_11:58:30" departureTime="11:58:30" vehicleRefId="veh_66_subway"/>
+				<departure id="504418_13:38:30" departureTime="13:38:30" vehicleRefId="veh_67_subway"/>
+				<departure id="506669_20:48:30" departureTime="20:48:30" vehicleRefId="veh_68_subway"/>
+				<departure id="512902_11:18:30" departureTime="11:18:30" vehicleRefId="veh_69_subway"/>
+				<departure id="517208_22:18:30" departureTime="22:18:30" vehicleRefId="veh_70_subway"/>
+				<departure id="532824_12:28:30" departureTime="12:28:30" vehicleRefId="veh_71_subway"/>
+				<departure id="546181_24:38:30" departureTime="24:38:30" vehicleRefId="veh_72_subway"/>
+				<departure id="547560_24:18:30" departureTime="24:18:30" vehicleRefId="veh_73_subway"/>
+				<departure id="547583_15:38:30" departureTime="15:38:30" vehicleRefId="veh_74_subway"/>
+				<departure id="558265_14:08:30" departureTime="14:08:30" vehicleRefId="veh_75_subway"/>
+				<departure id="560420_22:38:30" departureTime="22:38:30" vehicleRefId="veh_76_subway"/>
+				<departure id="565719_07:18:30" departureTime="07:18:30" vehicleRefId="veh_77_subway"/>
+				<departure id="614140_16:58:30" departureTime="16:58:30" vehicleRefId="veh_78_subway"/>
+				<departure id="627306_23:18:30" departureTime="23:18:30" vehicleRefId="veh_79_subway"/>
+				<departure id="634394_19:38:30" departureTime="19:38:30" vehicleRefId="veh_80_subway"/>
+				<departure id="653480_11:08:30" departureTime="11:08:30" vehicleRefId="veh_81_subway"/>
+				<departure id="664992_15:48:30" departureTime="15:48:30" vehicleRefId="veh_82_subway"/>
+				<departure id="665144_05:38:30" departureTime="05:38:30" vehicleRefId="veh_83_subway"/>
+				<departure id="676779_15:18:30" departureTime="15:18:30" vehicleRefId="veh_84_subway"/>
+				<departure id="688257_22:58:30" departureTime="22:58:30" vehicleRefId="veh_85_subway"/>
+				<departure id="697454_13:28:30" departureTime="13:28:30" vehicleRefId="veh_86_subway"/>
+				<departure id="721647_16:18:30" departureTime="16:18:30" vehicleRefId="veh_87_subway"/>
+				<departure id="758662_05:58:30" departureTime="05:58:30" vehicleRefId="veh_88_subway"/>
+				<departure id="775519_18:28:30" departureTime="18:28:30" vehicleRefId="veh_89_subway"/>
+				<departure id="786674_19:08:30" departureTime="19:08:30" vehicleRefId="veh_90_subway"/>
+				<departure id="789704_20:28:30" departureTime="20:28:30" vehicleRefId="veh_91_subway"/>
+				<departure id="790421_14:28:30" departureTime="14:28:30" vehicleRefId="veh_92_subway"/>
+				<departure id="790837_09:18:30" departureTime="09:18:30" vehicleRefId="veh_93_subway"/>
+				<departure id="793457_10:28:30" departureTime="10:28:30" vehicleRefId="veh_94_subway"/>
+				<departure id="798910_21:48:30" departureTime="21:48:30" vehicleRefId="veh_95_subway"/>
+				<departure id="818583_04:58:30" departureTime="04:58:30" vehicleRefId="veh_96_subway"/>
+				<departure id="836928_18:38:30" departureTime="18:38:30" vehicleRefId="veh_97_subway"/>
+				<departure id="848110_08:18:30" departureTime="08:18:30" vehicleRefId="veh_98_subway"/>
+				<departure id="856919_13:48:30" departureTime="13:48:30" vehicleRefId="veh_99_subway"/>
+				<departure id="889719_12:38:30" departureTime="12:38:30" vehicleRefId="veh_100_subway"/>
+				<departure id="900075_14:48:30" departureTime="14:48:30" vehicleRefId="veh_101_subway"/>
+				<departure id="904496_13:18:30" departureTime="13:18:30" vehicleRefId="veh_102_subway"/>
+				<departure id="915749_10:18:30" departureTime="10:18:30" vehicleRefId="veh_103_subway"/>
+				<departure id="926186_12:48:30" departureTime="12:48:30" vehicleRefId="veh_104_subway"/>
+				<departure id="940248_21:18:30" departureTime="21:18:30" vehicleRefId="veh_105_subway"/>
+				<departure id="946985_18:58:30" departureTime="18:58:30" vehicleRefId="veh_106_subway"/>
+				<departure id="977191_16:08:30" departureTime="16:08:30" vehicleRefId="veh_107_subway"/>
+				<departure id="978240_23:48:30" departureTime="23:48:30" vehicleRefId="veh_108_subway"/>
+				<departure id="980071_09:28:30" departureTime="09:28:30" vehicleRefId="veh_109_subway"/>
+				<departure id="986990_23:38:30" departureTime="23:38:30" vehicleRefId="veh_110_subway"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="271390">
+			<transportMode>subway</transportMode>
+			<routeProfile>
+				<stop refId="668951.link:22" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="671935.link:24" arrivalOffset="00:01:30" departureOffset="00:01:30" awaitDeparture="true"/>
+				<stop refId="115487.link:28" arrivalOffset="00:02:50" departureOffset="00:02:50" awaitDeparture="true"/>
+				<stop refId="273255.link:1271" arrivalOffset="00:04:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<route>
+				<link refId="22"/>
+				<link refId="24"/>
+				<link refId="26"/>
+				<link refId="28"/>
+				<link refId="30"/>
+				<link refId="1271"/>
+			</route>
+			<departures>
+				<departure id="1020679_13:17:50" departureTime="13:17:50" vehicleRefId="veh_111_subway"/>
+				<departure id="1025208_20:17:50" departureTime="20:17:50" vehicleRefId="veh_112_subway"/>
+				<departure id="1037106_16:57:50" departureTime="16:57:50" vehicleRefId="veh_113_subway"/>
+				<departure id="1043090_11:27:50" departureTime="11:27:50" vehicleRefId="veh_114_subway"/>
+				<departure id="1045119_12:57:50" departureTime="12:57:50" vehicleRefId="veh_115_subway"/>
+				<departure id="1068622_22:57:50" departureTime="22:57:50" vehicleRefId="veh_116_subway"/>
+				<departure id="1079733_18:47:50" departureTime="18:47:50" vehicleRefId="veh_117_subway"/>
+				<departure id="1090051_06:57:50" departureTime="06:57:50" vehicleRefId="veh_118_subway"/>
+				<departure id="1091408_11:47:50" departureTime="11:47:50" vehicleRefId="veh_119_subway"/>
+				<departure id="1102528_07:57:50" departureTime="07:57:50" vehicleRefId="veh_120_subway"/>
+				<departure id="1114790_09:27:50" departureTime="09:27:50" vehicleRefId="veh_121_subway"/>
+				<departure id="112856_18:17:50" departureTime="18:17:50" vehicleRefId="veh_122_subway"/>
+				<departure id="1144410_20:07:50" departureTime="20:07:50" vehicleRefId="veh_123_subway"/>
+				<departure id="1158430_23:47:50" departureTime="23:47:50" vehicleRefId="veh_124_subway"/>
+				<departure id="1182550_23:27:50" departureTime="23:27:50" vehicleRefId="veh_125_subway"/>
+				<departure id="1191695_10:37:50" departureTime="10:37:50" vehicleRefId="veh_126_subway"/>
+				<departure id="1201470_12:47:50" departureTime="12:47:50" vehicleRefId="veh_127_subway"/>
+				<departure id="1218362_14:07:50" departureTime="14:07:50" vehicleRefId="veh_128_subway"/>
+				<departure id="1231743_19:37:50" departureTime="19:37:50" vehicleRefId="veh_129_subway"/>
+				<departure id="1250824_21:27:50" departureTime="21:27:50" vehicleRefId="veh_130_subway"/>
+				<departure id="1255343_19:57:50" departureTime="19:57:50" vehicleRefId="veh_131_subway"/>
+				<departure id="1258017_21:17:50" departureTime="21:17:50" vehicleRefId="veh_132_subway"/>
+				<departure id="1282962_10:57:50" departureTime="10:57:50" vehicleRefId="veh_133_subway"/>
+				<departure id="1285410_09:07:50" departureTime="09:07:50" vehicleRefId="veh_134_subway"/>
+				<departure id="1301740_14:27:50" departureTime="14:27:50" vehicleRefId="veh_135_subway"/>
+				<departure id="1302130_10:27:50" departureTime="10:27:50" vehicleRefId="veh_136_subway"/>
+				<departure id="1315664_21:07:50" departureTime="21:07:50" vehicleRefId="veh_137_subway"/>
+				<departure id="1344649_07:17:50" departureTime="07:17:50" vehicleRefId="veh_138_subway"/>
+				<departure id="1355426_14:17:50" departureTime="14:17:50" vehicleRefId="veh_139_subway"/>
+				<departure id="1363857_16:07:50" departureTime="16:07:50" vehicleRefId="veh_140_subway"/>
+				<departure id="1367124_24:07:50" departureTime="24:07:50" vehicleRefId="veh_141_subway"/>
+				<departure id="1385787_20:47:50" departureTime="20:47:50" vehicleRefId="veh_142_subway"/>
+				<departure id="1386336_22:17:50" departureTime="22:17:50" vehicleRefId="veh_143_subway"/>
+				<departure id="1412814_06:17:50" departureTime="06:17:50" vehicleRefId="veh_144_subway"/>
+				<departure id="1422645_12:17:50" departureTime="12:17:50" vehicleRefId="veh_145_subway"/>
+				<departure id="1452830_19:07:50" departureTime="19:07:50" vehicleRefId="veh_146_subway"/>
+				<departure id="1454204_18:37:50" departureTime="18:37:50" vehicleRefId="veh_147_subway"/>
+				<departure id="1505776_15:17:50" departureTime="15:17:50" vehicleRefId="veh_148_subway"/>
+				<departure id="1511469_15:57:50" departureTime="15:57:50" vehicleRefId="veh_149_subway"/>
+				<departure id="1516210_08:57:50" departureTime="08:57:50" vehicleRefId="veh_150_subway"/>
+				<departure id="1529034_20:37:50" departureTime="20:37:50" vehicleRefId="veh_151_subway"/>
+				<departure id="1534141_10:17:50" departureTime="10:17:50" vehicleRefId="veh_152_subway"/>
+				<departure id="1540605_24:37:50" departureTime="24:37:50" vehicleRefId="veh_153_subway"/>
+				<departure id="157179_10:47:50" departureTime="10:47:50" vehicleRefId="veh_154_subway"/>
+				<departure id="182270_24:57:50" departureTime="24:57:50" vehicleRefId="veh_155_subway"/>
+				<departure id="183628_08:17:50" departureTime="08:17:50" vehicleRefId="veh_156_subway"/>
+				<departure id="219276_21:57:50" departureTime="21:57:50" vehicleRefId="veh_157_subway"/>
+				<departure id="226927_08:37:50" departureTime="08:37:50" vehicleRefId="veh_158_subway"/>
+				<departure id="232123_22:27:50" departureTime="22:27:50" vehicleRefId="veh_159_subway"/>
+				<departure id="264890_09:37:50" departureTime="09:37:50" vehicleRefId="veh_160_subway"/>
+				<departure id="265402_17:27:50" departureTime="17:27:50" vehicleRefId="veh_161_subway"/>
+				<departure id="271390_09:47:50" departureTime="09:47:50" vehicleRefId="veh_162_subway"/>
+				<departure id="276475_11:17:50" departureTime="11:17:50" vehicleRefId="veh_163_subway"/>
+				<departure id="280510_15:07:50" departureTime="15:07:50" vehicleRefId="veh_164_subway"/>
+				<departure id="310778_23:57:50" departureTime="23:57:50" vehicleRefId="veh_165_subway"/>
+				<departure id="319196_17:07:50" departureTime="17:07:50" vehicleRefId="veh_166_subway"/>
+				<departure id="323810_07:37:50" departureTime="07:37:50" vehicleRefId="veh_167_subway"/>
+				<departure id="331868_13:47:50" departureTime="13:47:50" vehicleRefId="veh_168_subway"/>
+				<departure id="335199_22:37:50" departureTime="22:37:50" vehicleRefId="veh_169_subway"/>
+				<departure id="375747_16:17:50" departureTime="16:17:50" vehicleRefId="veh_170_subway"/>
+				<departure id="38116_18:57:50" departureTime="18:57:50" vehicleRefId="veh_171_subway"/>
+				<departure id="385846_15:27:50" departureTime="15:27:50" vehicleRefId="veh_172_subway"/>
+				<departure id="391458_21:37:50" departureTime="21:37:50" vehicleRefId="veh_173_subway"/>
+				<departure id="404509_22:07:50" departureTime="22:07:50" vehicleRefId="veh_174_subway"/>
+				<departure id="4223_17:57:50" departureTime="17:57:50" vehicleRefId="veh_175_subway"/>
+				<departure id="425122_19:17:50" departureTime="19:17:50" vehicleRefId="veh_176_subway"/>
+				<departure id="460031_12:07:50" departureTime="12:07:50" vehicleRefId="veh_177_subway"/>
+				<departure id="497414_11:57:50" departureTime="11:57:50" vehicleRefId="veh_178_subway"/>
+				<departure id="4992_06:37:50" departureTime="06:37:50" vehicleRefId="veh_179_subway"/>
+				<departure id="505922_13:07:50" departureTime="13:07:50" vehicleRefId="veh_180_subway"/>
+				<departure id="51294_14:37:50" departureTime="14:37:50" vehicleRefId="veh_181_subway"/>
+				<departure id="543758_05:37:50" departureTime="05:37:50" vehicleRefId="veh_182_subway"/>
+				<departure id="546161_09:57:50" departureTime="09:57:50" vehicleRefId="veh_183_subway"/>
+				<departure id="550054_17:37:50" departureTime="17:37:50" vehicleRefId="veh_184_subway"/>
+				<departure id="578900_13:27:50" departureTime="13:27:50" vehicleRefId="veh_185_subway"/>
+				<departure id="581402_17:17:50" departureTime="17:17:50" vehicleRefId="veh_186_subway"/>
+				<departure id="593539_16:37:50" departureTime="16:37:50" vehicleRefId="veh_187_subway"/>
+				<departure id="621104_20:57:50" departureTime="20:57:50" vehicleRefId="veh_188_subway"/>
+				<departure id="627156_17:47:50" departureTime="17:47:50" vehicleRefId="veh_189_subway"/>
+				<departure id="628499_14:47:50" departureTime="14:47:50" vehicleRefId="veh_190_subway"/>
+				<departure id="6343_05:57:50" departureTime="05:57:50" vehicleRefId="veh_191_subway"/>
+				<departure id="654798_23:17:50" departureTime="23:17:50" vehicleRefId="veh_192_subway"/>
+				<departure id="663354_11:07:50" departureTime="11:07:50" vehicleRefId="veh_193_subway"/>
+				<departure id="690270_10:07:50" departureTime="10:07:50" vehicleRefId="veh_194_subway"/>
+				<departure id="690666_19:27:50" departureTime="19:27:50" vehicleRefId="veh_195_subway"/>
+				<departure id="696225_15:37:50" departureTime="15:37:50" vehicleRefId="veh_196_subway"/>
+				<departure id="752639_12:27:50" departureTime="12:27:50" vehicleRefId="veh_197_subway"/>
+				<departure id="762899_08:47:50" departureTime="08:47:50" vehicleRefId="veh_198_subway"/>
+				<departure id="797592_13:37:50" departureTime="13:37:50" vehicleRefId="veh_199_subway"/>
+				<departure id="800724_21:47:50" departureTime="21:47:50" vehicleRefId="veh_200_subway"/>
+				<departure id="836843_15:47:50" departureTime="15:47:50" vehicleRefId="veh_201_subway"/>
+				<departure id="840305_05:17:50" departureTime="05:17:50" vehicleRefId="veh_202_subway"/>
+				<departure id="840792_22:47:50" departureTime="22:47:50" vehicleRefId="veh_203_subway"/>
+				<departure id="849665_20:27:50" departureTime="20:27:50" vehicleRefId="veh_204_subway"/>
+				<departure id="862326_16:27:50" departureTime="16:27:50" vehicleRefId="veh_205_subway"/>
+				<departure id="864786_19:47:50" departureTime="19:47:50" vehicleRefId="veh_206_subway"/>
+				<departure id="866945_11:37:50" departureTime="11:37:50" vehicleRefId="veh_207_subway"/>
+				<departure id="879512_23:07:50" departureTime="23:07:50" vehicleRefId="veh_208_subway"/>
+				<departure id="896654_18:07:50" departureTime="18:07:50" vehicleRefId="veh_209_subway"/>
+				<departure id="936383_16:47:50" departureTime="16:47:50" vehicleRefId="veh_210_subway"/>
+				<departure id="940977_23:37:50" departureTime="23:37:50" vehicleRefId="veh_211_subway"/>
+				<departure id="943620_13:57:50" departureTime="13:57:50" vehicleRefId="veh_212_subway"/>
+				<departure id="950680_12:37:50" departureTime="12:37:50" vehicleRefId="veh_213_subway"/>
+				<departure id="958154_18:27:50" departureTime="18:27:50" vehicleRefId="veh_214_subway"/>
+				<departure id="965724_24:17:50" departureTime="24:17:50" vehicleRefId="veh_215_subway"/>
+				<departure id="96779_09:17:50" departureTime="09:17:50" vehicleRefId="veh_216_subway"/>
+				<departure id="987582_14:57:50" departureTime="14:57:50" vehicleRefId="veh_217_subway"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+	<transitLine id="1736" name="U3">
+	</transitLine>
+	<transitLine id="5244" name="U6">
+		<transitRoute id="162815">
+			<transportMode>subway</transportMode>
+			<routeProfile>
+				<stop refId="668951.link:22" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="671935.link:24" arrivalOffset="00:01:30" departureOffset="00:01:30" awaitDeparture="true"/>
+				<stop refId="115487.link:28" arrivalOffset="00:02:50" departureOffset="00:02:50" awaitDeparture="true"/>
+				<stop refId="324290.link:1271" arrivalOffset="00:04:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<route>
+				<link refId="22"/>
+				<link refId="24"/>
+				<link refId="26"/>
+				<link refId="28"/>
+				<link refId="30"/>
+				<link refId="1271"/>
+			</route>
+			<departures>
+				<departure id="101912_15:43:50" departureTime="15:43:50" vehicleRefId="veh_222_subway"/>
+				<departure id="1020981_23:33:50" departureTime="23:33:50" vehicleRefId="veh_223_subway"/>
+				<departure id="1040544_17:13:50" departureTime="17:13:50" vehicleRefId="veh_224_subway"/>
+				<departure id="1040915_09:23:50" departureTime="09:23:50" vehicleRefId="veh_225_subway"/>
+				<departure id="1057565_12:53:50" departureTime="12:53:50" vehicleRefId="veh_226_subway"/>
+				<departure id="1078386_08:43:50" departureTime="08:43:50" vehicleRefId="veh_227_subway"/>
+				<departure id="1133799_08:53:50" departureTime="08:53:50" vehicleRefId="veh_228_subway"/>
+				<departure id="1149323_18:53:50" departureTime="18:53:50" vehicleRefId="veh_229_subway"/>
+				<departure id="1155330_24:23:50" departureTime="24:23:50" vehicleRefId="veh_230_subway"/>
+				<departure id="1185421_06:25:50" departureTime="06:25:50" vehicleRefId="veh_231_subway"/>
+				<departure id="1224315_22:33:50" departureTime="22:33:50" vehicleRefId="veh_232_subway"/>
+				<departure id="122479_13:53:50" departureTime="13:53:50" vehicleRefId="veh_233_subway"/>
+				<departure id="1248893_24:03:50" departureTime="24:03:50" vehicleRefId="veh_234_subway"/>
+				<departure id="1257079_14:33:50" departureTime="14:33:50" vehicleRefId="veh_235_subway"/>
+				<departure id="1267414_05:06:00" departureTime="05:06:00" vehicleRefId="veh_236_subway"/>
+				<departure id="1267960_11:43:50" departureTime="11:43:50" vehicleRefId="veh_237_subway"/>
+				<departure id="12718_15:53:50" departureTime="15:53:50" vehicleRefId="veh_238_subway"/>
+				<departure id="1289085_21:53:50" departureTime="21:53:50" vehicleRefId="veh_239_subway"/>
+				<departure id="1298240_15:23:50" departureTime="15:23:50" vehicleRefId="veh_240_subway"/>
+				<departure id="1300818_19:03:50" departureTime="19:03:50" vehicleRefId="veh_241_subway"/>
+				<departure id="1301695_19:43:50" departureTime="19:43:50" vehicleRefId="veh_242_subway"/>
+				<departure id="130251_15:33:50" departureTime="15:33:50" vehicleRefId="veh_243_subway"/>
+				<departure id="1308497_22:53:50" departureTime="22:53:50" vehicleRefId="veh_244_subway"/>
+				<departure id="1328272_07:45:50" departureTime="07:45:50" vehicleRefId="veh_245_subway"/>
+				<departure id="1339293_06:45:50" departureTime="06:45:50" vehicleRefId="veh_246_subway"/>
+				<departure id="1342419_22:03:50" departureTime="22:03:50" vehicleRefId="veh_247_subway"/>
+				<departure id="1350478_21:03:50" departureTime="21:03:50" vehicleRefId="veh_248_subway"/>
+				<departure id="1353913_11:13:50" departureTime="11:13:50" vehicleRefId="veh_249_subway"/>
+				<departure id="135433_05:25:50" departureTime="05:25:50" vehicleRefId="veh_250_subway"/>
+				<departure id="1368813_12:43:50" departureTime="12:43:50" vehicleRefId="veh_251_subway"/>
+				<departure id="1380082_17:33:50" departureTime="17:33:50" vehicleRefId="veh_252_subway"/>
+				<departure id="1383128_14:23:50" departureTime="14:23:50" vehicleRefId="veh_253_subway"/>
+				<departure id="1384922_09:53:50" departureTime="09:53:50" vehicleRefId="veh_254_subway"/>
+				<departure id="1400764_17:43:50" departureTime="17:43:50" vehicleRefId="veh_255_subway"/>
+				<departure id="1418883_22:13:50" departureTime="22:13:50" vehicleRefId="veh_256_subway"/>
+				<departure id="1432214_18:43:50" departureTime="18:43:50" vehicleRefId="veh_257_subway"/>
+				<departure id="1476888_05:45:50" departureTime="05:45:50" vehicleRefId="veh_258_subway"/>
+				<departure id="1477969_18:33:50" departureTime="18:33:50" vehicleRefId="veh_259_subway"/>
+				<departure id="1496915_23:23:50" departureTime="23:23:50" vehicleRefId="veh_260_subway"/>
+				<departure id="1497003_08:05:50" departureTime="08:05:50" vehicleRefId="veh_261_subway"/>
+				<departure id="1502073_13:03:50" departureTime="13:03:50" vehicleRefId="veh_262_subway"/>
+				<departure id="162815_19:13:50" departureTime="19:13:50" vehicleRefId="veh_263_subway"/>
+				<departure id="19066_10:13:50" departureTime="10:13:50" vehicleRefId="veh_264_subway"/>
+				<departure id="218574_09:43:50" departureTime="09:43:50" vehicleRefId="veh_265_subway"/>
+				<departure id="220145_17:03:50" departureTime="17:03:50" vehicleRefId="veh_266_subway"/>
+				<departure id="223912_12:23:50" departureTime="12:23:50" vehicleRefId="veh_267_subway"/>
+				<departure id="245206_14:13:50" departureTime="14:13:50" vehicleRefId="veh_268_subway"/>
+				<departure id="24930_09:13:50" departureTime="09:13:50" vehicleRefId="veh_269_subway"/>
+				<departure id="249490_19:33:50" departureTime="19:33:50" vehicleRefId="veh_270_subway"/>
+				<departure id="283553_22:23:50" departureTime="22:23:50" vehicleRefId="veh_271_subway"/>
+				<departure id="299729_17:23:50" departureTime="17:23:50" vehicleRefId="veh_272_subway"/>
+				<departure id="343178_20:23:50" departureTime="20:23:50" vehicleRefId="veh_273_subway"/>
+				<departure id="393026_07:25:50" departureTime="07:25:50" vehicleRefId="veh_274_subway"/>
+				<departure id="404456_20:53:50" departureTime="20:53:50" vehicleRefId="veh_275_subway"/>
+				<departure id="418765_18:03:50" departureTime="18:03:50" vehicleRefId="veh_276_subway"/>
+				<departure id="4319_13:13:50" departureTime="13:13:50" vehicleRefId="veh_277_subway"/>
+				<departure id="44450_16:23:50" departureTime="16:23:50" vehicleRefId="veh_278_subway"/>
+				<departure id="447339_17:53:50" departureTime="17:53:50" vehicleRefId="veh_279_subway"/>
+				<departure id="449989_23:43:50" departureTime="23:43:50" vehicleRefId="veh_280_subway"/>
+				<departure id="474963_21:33:50" departureTime="21:33:50" vehicleRefId="veh_281_subway"/>
+				<departure id="513449_18:23:50" departureTime="18:23:50" vehicleRefId="veh_282_subway"/>
+				<departure id="535911_12:13:50" departureTime="12:13:50" vehicleRefId="veh_283_subway"/>
+				<departure id="544057_21:13:50" departureTime="21:13:50" vehicleRefId="veh_284_subway"/>
+				<departure id="56663_24:33:50" departureTime="24:33:50" vehicleRefId="veh_285_subway"/>
+				<departure id="570897_19:23:50" departureTime="19:23:50" vehicleRefId="veh_286_subway"/>
+				<departure id="572615_19:53:50" departureTime="19:53:50" vehicleRefId="veh_287_subway"/>
+				<departure id="574696_09:33:50" departureTime="09:33:50" vehicleRefId="veh_288_subway"/>
+				<departure id="589775_12:33:50" departureTime="12:33:50" vehicleRefId="veh_289_subway"/>
+				<departure id="59705_10:33:50" departureTime="10:33:50" vehicleRefId="veh_290_subway"/>
+				<departure id="602551_16:33:50" departureTime="16:33:50" vehicleRefId="veh_291_subway"/>
+				<departure id="615059_18:13:50" departureTime="18:13:50" vehicleRefId="veh_292_subway"/>
+				<departure id="622526_20:03:50" departureTime="20:03:50" vehicleRefId="veh_293_subway"/>
+				<departure id="623350_20:33:50" departureTime="20:33:50" vehicleRefId="veh_294_subway"/>
+				<departure id="645703_11:23:50" departureTime="11:23:50" vehicleRefId="veh_295_subway"/>
+				<departure id="646856_20:13:50" departureTime="20:13:50" vehicleRefId="veh_296_subway"/>
+				<departure id="710184_10:03:50" departureTime="10:03:50" vehicleRefId="veh_297_subway"/>
+				<departure id="714649_07:05:50" departureTime="07:05:50" vehicleRefId="veh_298_subway"/>
+				<departure id="715476_16:13:50" departureTime="16:13:50" vehicleRefId="veh_299_subway"/>
+				<departure id="717417_16:03:50" departureTime="16:03:50" vehicleRefId="veh_300_subway"/>
+				<departure id="720204_16:53:50" departureTime="16:53:50" vehicleRefId="veh_301_subway"/>
+				<departure id="72022_23:53:50" departureTime="23:53:50" vehicleRefId="veh_302_subway"/>
+				<departure id="734198_22:43:50" departureTime="22:43:50" vehicleRefId="veh_303_subway"/>
+				<departure id="753178_16:43:50" departureTime="16:43:50" vehicleRefId="veh_304_subway"/>
+				<departure id="756525_14:03:50" departureTime="14:03:50" vehicleRefId="veh_305_subway"/>
+				<departure id="762077_13:33:50" departureTime="13:33:50" vehicleRefId="veh_306_subway"/>
+				<departure id="763559_11:53:50" departureTime="11:53:50" vehicleRefId="veh_307_subway"/>
+				<departure id="767656_10:23:50" departureTime="10:23:50" vehicleRefId="veh_308_subway"/>
+				<departure id="768072_12:03:50" departureTime="12:03:50" vehicleRefId="veh_309_subway"/>
+				<departure id="772247_10:43:50" departureTime="10:43:50" vehicleRefId="veh_310_subway"/>
+				<departure id="778093_06:05:50" departureTime="06:05:50" vehicleRefId="veh_311_subway"/>
+				<departure id="786774_14:43:50" departureTime="14:43:50" vehicleRefId="veh_312_subway"/>
+				<departure id="803331_23:03:50" departureTime="23:03:50" vehicleRefId="veh_313_subway"/>
+				<departure id="81126_13:43:50" departureTime="13:43:50" vehicleRefId="veh_314_subway"/>
+				<departure id="819227_11:03:50" departureTime="11:03:50" vehicleRefId="veh_315_subway"/>
+				<departure id="824815_21:23:50" departureTime="21:23:50" vehicleRefId="veh_316_subway"/>
+				<departure id="829351_09:03:50" departureTime="09:03:50" vehicleRefId="veh_317_subway"/>
+				<departure id="840163_11:33:50" departureTime="11:33:50" vehicleRefId="veh_318_subway"/>
+				<departure id="860488_15:03:50" departureTime="15:03:50" vehicleRefId="veh_319_subway"/>
+				<departure id="868613_24:13:50" departureTime="24:13:50" vehicleRefId="veh_320_subway"/>
+				<departure id="886334_23:13:50" departureTime="23:13:50" vehicleRefId="veh_321_subway"/>
+				<departure id="887056_14:53:50" departureTime="14:53:50" vehicleRefId="veh_322_subway"/>
+				<departure id="89132_20:43:50" departureTime="20:43:50" vehicleRefId="veh_323_subway"/>
+				<departure id="894977_21:43:50" departureTime="21:43:50" vehicleRefId="veh_324_subway"/>
+				<departure id="938213_24:53:50" departureTime="24:53:50" vehicleRefId="veh_325_subway"/>
+				<departure id="967894_10:53:50" departureTime="10:53:50" vehicleRefId="veh_326_subway"/>
+				<departure id="969735_13:23:50" departureTime="13:23:50" vehicleRefId="veh_327_subway"/>
+				<departure id="970798_15:13:50" departureTime="15:13:50" vehicleRefId="veh_328_subway"/>
+				<departure id="985524_08:25:50" departureTime="08:25:50" vehicleRefId="veh_329_subway"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="1095755">
+			<transportMode>subway</transportMode>
+			<routeProfile>
+				<stop refId="668951.link:22" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="671935.link:24" arrivalOffset="00:03:30" departureOffset="00:03:30" awaitDeparture="true"/>
+				<stop refId="115487.link:28" arrivalOffset="00:04:50" departureOffset="00:04:50" awaitDeparture="true"/>
+				<stop refId="324290.link:1271" arrivalOffset="00:06:00" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<route>
+				<link refId="22"/>
+				<link refId="24"/>
+				<link refId="26"/>
+				<link refId="28"/>
+				<link refId="30"/>
+				<link refId="1271"/>
+			</route>
+			<departures>
+				<departure id="1055799_04:09:50" departureTime="04:09:50" vehicleRefId="veh_441_subway"/>
+				<departure id="1095755_03:39:50" departureTime="03:39:50" vehicleRefId="veh_442_subway"/>
+				<departure id="880793_04:39:50" departureTime="04:39:50" vehicleRefId="veh_443_subway"/>
+			</departures>
+		</transitRoute>
+		<transitRoute id="333706">
+			<transportMode>subway</transportMode>
+			<routeProfile>
+				<stop refId="271358.link:686" arrivalOffset="00:00:00" departureOffset="00:00:00" awaitDeparture="true"/>
+				<stop refId="176036.link:1185" arrivalOffset="00:01:20" departureOffset="00:01:20" awaitDeparture="true"/>
+				<stop refId="292942.link:1181" arrivalOffset="00:02:40" departureOffset="00:02:40" awaitDeparture="true"/>
+				<stop refId="650810.link:36" arrivalOffset="00:04:10" departureOffset="00:00:00" awaitDeparture="true"/>
+			</routeProfile>
+			<route>
+				<link refId="686"/>
+				<link refId="1187"/>
+				<link refId="1185"/>
+				<link refId="1183"/>
+				<link refId="1181"/>
+				<link refId="36"/>
+			</route>
+			<departures>
+				<departure id="1008354_06:13:30" departureTime="06:13:30" vehicleRefId="veh_330_subway"/>
+				<departure id="1010880_21:03:30" departureTime="21:03:30" vehicleRefId="veh_331_subway"/>
+				<departure id="1019282_19:03:30" departureTime="19:03:30" vehicleRefId="veh_332_subway"/>
+				<departure id="1039064_18:53:30" departureTime="18:53:30" vehicleRefId="veh_333_subway"/>
+				<departure id="1052136_04:53:30" departureTime="04:53:30" vehicleRefId="veh_334_subway"/>
+				<departure id="1061907_12:13:30" departureTime="12:13:30" vehicleRefId="veh_335_subway"/>
+				<departure id="1062077_13:43:30" departureTime="13:43:30" vehicleRefId="veh_336_subway"/>
+				<departure id="1070219_13:03:30" departureTime="13:03:30" vehicleRefId="veh_337_subway"/>
+				<departure id="1081521_17:23:30" departureTime="17:23:30" vehicleRefId="veh_338_subway"/>
+				<departure id="1083585_10:03:30" departureTime="10:03:30" vehicleRefId="veh_339_subway"/>
+				<departure id="1098277_19:23:30" departureTime="19:23:30" vehicleRefId="veh_340_subway"/>
+				<departure id="111713_10:23:30" departureTime="10:23:30" vehicleRefId="veh_341_subway"/>
+				<departure id="1144717_17:53:30" departureTime="17:53:30" vehicleRefId="veh_342_subway"/>
+				<departure id="1145834_10:33:30" departureTime="10:33:30" vehicleRefId="veh_343_subway"/>
+				<departure id="114680_05:33:30" departureTime="05:33:30" vehicleRefId="veh_344_subway"/>
+				<departure id="1162962_03:27:30" departureTime="03:27:30" vehicleRefId="veh_345_subway"/>
+				<departure id="1169612_22:43:30" departureTime="22:43:30" vehicleRefId="veh_346_subway"/>
+				<departure id="1170715_20:23:30" departureTime="20:23:30" vehicleRefId="veh_347_subway"/>
+				<departure id="1171427_16:43:30" departureTime="16:43:30" vehicleRefId="veh_348_subway"/>
+				<departure id="1182126_23:13:30" departureTime="23:13:30" vehicleRefId="veh_349_subway"/>
+				<departure id="1189658_15:03:30" departureTime="15:03:30" vehicleRefId="veh_350_subway"/>
+				<departure id="1198053_17:03:30" departureTime="17:03:30" vehicleRefId="veh_351_subway"/>
+				<departure id="1199109_06:33:30" departureTime="06:33:30" vehicleRefId="veh_352_subway"/>
+				<departure id="1199336_12:43:30" departureTime="12:43:30" vehicleRefId="veh_353_subway"/>
+				<departure id="1201832_07:33:30" departureTime="07:33:30" vehicleRefId="veh_354_subway"/>
+				<departure id="1213058_05:53:30" departureTime="05:53:30" vehicleRefId="veh_355_subway"/>
+				<departure id="1215903_14:53:30" departureTime="14:53:30" vehicleRefId="veh_356_subway"/>
+				<departure id="1222150_14:23:30" departureTime="14:23:30" vehicleRefId="veh_357_subway"/>
+				<departure id="1223742_11:23:30" departureTime="11:23:30" vehicleRefId="veh_358_subway"/>
+				<departure id="1227441_16:03:30" departureTime="16:03:30" vehicleRefId="veh_359_subway"/>
+				<departure id="1249310_18:33:30" departureTime="18:33:30" vehicleRefId="veh_360_subway"/>
+				<departure id="1256052_05:13:30" departureTime="05:13:30" vehicleRefId="veh_361_subway"/>
+				<departure id="1265616_18:43:30" departureTime="18:43:30" vehicleRefId="veh_362_subway"/>
+				<departure id="1288158_09:33:30" departureTime="09:33:30" vehicleRefId="veh_363_subway"/>
+				<departure id="1319302_17:43:30" departureTime="17:43:30" vehicleRefId="veh_364_subway"/>
+				<departure id="1369111_12:33:30" departureTime="12:33:30" vehicleRefId="veh_365_subway"/>
+				<departure id="1371586_18:03:30" departureTime="18:03:30" vehicleRefId="veh_366_subway"/>
+				<departure id="1425425_24:03:30" departureTime="24:03:30" vehicleRefId="veh_367_subway"/>
+				<departure id="1443045_15:23:30" departureTime="15:23:30" vehicleRefId="veh_368_subway"/>
+				<departure id="1443679_13:23:30" departureTime="13:23:30" vehicleRefId="veh_369_subway"/>
+				<departure id="1460859_18:13:30" departureTime="18:13:30" vehicleRefId="veh_370_subway"/>
+				<departure id="1471217_24:53:30" departureTime="24:53:30" vehicleRefId="veh_371_subway"/>
+				<departure id="1472759_17:33:30" departureTime="17:33:30" vehicleRefId="veh_372_subway"/>
+				<departure id="1482362_16:53:30" departureTime="16:53:30" vehicleRefId="veh_373_subway"/>
+				<departure id="1492188_21:43:30" departureTime="21:43:30" vehicleRefId="veh_374_subway"/>
+				<departure id="1496593_10:53:30" departureTime="10:53:30" vehicleRefId="veh_375_subway"/>
+				<departure id="1519198_24:23:30" departureTime="24:23:30" vehicleRefId="veh_376_subway"/>
+				<departure id="152577_15:13:30" departureTime="15:13:30" vehicleRefId="veh_377_subway"/>
+				<departure id="154001_23:33:30" departureTime="23:33:30" vehicleRefId="veh_378_subway"/>
+				<departure id="162385_19:53:30" departureTime="19:53:30" vehicleRefId="veh_379_subway"/>
+				<departure id="170345_14:03:30" departureTime="14:03:30" vehicleRefId="veh_380_subway"/>
+				<departure id="178727_11:43:30" departureTime="11:43:30" vehicleRefId="veh_381_subway"/>
+				<departure id="202584_13:33:30" departureTime="13:33:30" vehicleRefId="veh_382_subway"/>
+				<departure id="203384_23:53:30" departureTime="23:53:30" vehicleRefId="veh_383_subway"/>
+				<departure id="204969_12:23:30" departureTime="12:23:30" vehicleRefId="veh_384_subway"/>
+				<departure id="213762_12:03:30" departureTime="12:03:30" vehicleRefId="veh_385_subway"/>
+				<departure id="241286_15:33:30" departureTime="15:33:30" vehicleRefId="veh_386_subway"/>
+				<departure id="247539_24:33:30" departureTime="24:33:30" vehicleRefId="veh_387_subway"/>
+				<departure id="24836_15:53:30" departureTime="15:53:30" vehicleRefId="veh_388_subway"/>
+				<departure id="249985_16:23:30" departureTime="16:23:30" vehicleRefId="veh_389_subway"/>
+				<departure id="250009_21:23:30" departureTime="21:23:30" vehicleRefId="veh_390_subway"/>
+				<departure id="260975_14:43:30" departureTime="14:43:30" vehicleRefId="veh_391_subway"/>
+				<departure id="296363_07:13:30" departureTime="07:13:30" vehicleRefId="veh_392_subway"/>
+				<departure id="304595_20:43:30" departureTime="20:43:30" vehicleRefId="veh_393_subway"/>
+				<departure id="304875_11:13:30" departureTime="11:13:30" vehicleRefId="veh_394_subway"/>
+				<departure id="323615_16:13:30" departureTime="16:13:30" vehicleRefId="veh_395_subway"/>
+				<departure id="333706_20:03:30" departureTime="20:03:30" vehicleRefId="veh_396_subway"/>
+				<departure id="338615_22:33:30" departureTime="22:33:30" vehicleRefId="veh_397_subway"/>
+				<departure id="341587_03:57:30" departureTime="03:57:30" vehicleRefId="veh_398_subway"/>
+				<departure id="361697_19:33:30" departureTime="19:33:30" vehicleRefId="veh_399_subway"/>
+				<departure id="364731_13:13:30" departureTime="13:13:30" vehicleRefId="veh_400_subway"/>
+				<departure id="402683_17:13:30" departureTime="17:13:30" vehicleRefId="veh_401_subway"/>
+				<departure id="432231_21:33:30" departureTime="21:33:30" vehicleRefId="veh_402_subway"/>
+				<departure id="446863_07:53:30" departureTime="07:53:30" vehicleRefId="veh_403_subway"/>
+				<departure id="469915_08:33:30" departureTime="08:33:30" vehicleRefId="veh_404_subway"/>
+				<departure id="474060_20:13:30" departureTime="20:13:30" vehicleRefId="veh_405_subway"/>
+				<departure id="474389_22:53:30" departureTime="22:53:30" vehicleRefId="veh_406_subway"/>
+				<departure id="486983_19:13:30" departureTime="19:13:30" vehicleRefId="veh_407_subway"/>
+				<departure id="48713_15:43:30" departureTime="15:43:30" vehicleRefId="veh_408_subway"/>
+				<departure id="529303_18:23:30" departureTime="18:23:30" vehicleRefId="veh_409_subway"/>
+				<departure id="53731_08:53:30" departureTime="08:53:30" vehicleRefId="veh_410_subway"/>
+				<departure id="552670_16:33:30" departureTime="16:33:30" vehicleRefId="veh_411_subway"/>
+				<departure id="594095_13:53:30" departureTime="13:53:30" vehicleRefId="veh_412_subway"/>
+				<departure id="610269_21:53:30" departureTime="21:53:30" vehicleRefId="veh_413_subway"/>
+				<departure id="628524_12:53:30" departureTime="12:53:30" vehicleRefId="veh_414_subway"/>
+				<departure id="640400_14:33:30" departureTime="14:33:30" vehicleRefId="veh_415_subway"/>
+				<departure id="655649_20:33:30" departureTime="20:33:30" vehicleRefId="veh_416_subway"/>
+				<departure id="659960_09:43:30" departureTime="09:43:30" vehicleRefId="veh_417_subway"/>
+				<departure id="676706_04:27:30" departureTime="04:27:30" vehicleRefId="veh_418_subway"/>
+				<departure id="683846_23:23:30" departureTime="23:23:30" vehicleRefId="veh_419_subway"/>
+				<departure id="688776_23:43:30" departureTime="23:43:30" vehicleRefId="veh_420_subway"/>
+				<departure id="68901_22:13:30" departureTime="22:13:30" vehicleRefId="veh_421_subway"/>
+				<departure id="697357_06:53:30" departureTime="06:53:30" vehicleRefId="veh_422_subway"/>
+				<departure id="752593_11:53:30" departureTime="11:53:30" vehicleRefId="veh_423_subway"/>
+				<departure id="770322_23:03:30" departureTime="23:03:30" vehicleRefId="veh_424_subway"/>
+				<departure id="774941_20:53:30" departureTime="20:53:30" vehicleRefId="veh_425_subway"/>
+				<departure id="796914_09:53:30" departureTime="09:53:30" vehicleRefId="veh_426_subway"/>
+				<departure id="809301_22:03:30" departureTime="22:03:30" vehicleRefId="veh_427_subway"/>
+				<departure id="809986_08:13:30" departureTime="08:13:30" vehicleRefId="veh_428_subway"/>
+				<departure id="820303_09:13:30" departureTime="09:13:30" vehicleRefId="veh_429_subway"/>
+				<departure id="844105_11:33:30" departureTime="11:33:30" vehicleRefId="veh_430_subway"/>
+				<departure id="84758_14:13:30" departureTime="14:13:30" vehicleRefId="veh_431_subway"/>
+				<departure id="868167_22:23:30" departureTime="22:23:30" vehicleRefId="veh_432_subway"/>
+				<departure id="896484_19:43:30" departureTime="19:43:30" vehicleRefId="veh_433_subway"/>
+				<departure id="921727_10:43:30" departureTime="10:43:30" vehicleRefId="veh_434_subway"/>
+				<departure id="922437_10:13:30" departureTime="10:13:30" vehicleRefId="veh_435_subway"/>
+				<departure id="928952_24:13:30" departureTime="24:13:30" vehicleRefId="veh_436_subway"/>
+				<departure id="94220_09:23:30" departureTime="09:23:30" vehicleRefId="veh_437_subway"/>
+				<departure id="943039_21:13:30" departureTime="21:13:30" vehicleRefId="veh_438_subway"/>
+				<departure id="994551_09:03:30" departureTime="09:03:30" vehicleRefId="veh_439_subway"/>
+				<departure id="999535_11:03:30" departureTime="11:03:30" vehicleRefId="veh_440_subway"/>
+			</departures>
+		</transitRoute>
+	</transitLine>
+</transitSchedule>

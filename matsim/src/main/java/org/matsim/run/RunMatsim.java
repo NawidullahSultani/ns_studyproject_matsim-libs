@@ -57,6 +57,6 @@ public class RunMatsim {
 	}
 
 	public  static void main(String[] args) {
-		new RunMatsim(args).run();
+		new RunMatsim("C:\\Users\\Hamidullah\\IdeaProjects\\ns_studyproject_matsim-libs\\matsim\\stdProj\\config.xml").run();
 	}
 }

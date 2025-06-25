@@ -35,7 +35,7 @@ import org.matsim.core.scenario.ScenarioUtils;
 public class RunSwissRailRaptorExample {
 
 	public static void main(String[] args) {
-		String configFilename = args[0];
+		String configFilename = args[5];
 		Config config = ConfigUtils.loadConfig(configFilename);
 
 		Scenario scenario = ScenarioUtils.loadScenario(config);
