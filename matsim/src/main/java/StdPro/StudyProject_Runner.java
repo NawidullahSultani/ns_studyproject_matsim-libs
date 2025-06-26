@@ -43,13 +43,6 @@ public class StudyProject_Runner {
 		config.transitRouter().setExtensionRadius(1000);
 		config.transitRouter().setAdditionalTransferTime(0);
 
-		config.routing().addModeRoutingParams(
-			new RoutingConfigGroup.ModeRoutingParams("non_network_walk")
-				.setBeelineDistanceFactor(1.3)
-				.setTeleportedModeSpeed(1.34)
-		);
-
-
 		// 5. NETWORK AND SIMULATION MODES
 		config.routing().setNetworkModes(Set.of("car", "walk", "bike", "non_network_walk"));
 		config.qsim().setMainModes(Set.of("car", "subway", "walk", "bike", "non_network_walk"));
@@ -57,6 +50,16 @@ public class StudyProject_Runner {
 		config.routing().setRoutingRandomness(0.0);
 		config.routing().setNetworkRouteConsistencyCheck(RoutingConfigGroup.NetworkRouteConsistencyCheck.disable);
 		config.routing().setAccessEgressType(RoutingConfigGroup.AccessEgressType.accessEgressModeToLink);
+		config.routing().addModeRoutingParams(
+			new RoutingConfigGroup.ModeRoutingParams("non_network_walk")
+				.setBeelineDistanceFactor(1.3)
+				.setTeleportedModeSpeed(1.34));
+
+		RoutingConfigGroup.TeleportedModeParams transitWalk = new RoutingConfigGroup.TeleportedModeParams("transit_walk");
+		transitWalk.setBeelineDistanceFactor(1.3);
+		transitWalk.setTeleportedModeSpeed(5.0 / 3.6);
+		config.routing().addTeleportedModeParams(transitWalk);
+
 
 		// 6. SIMULATION TIME SETTINGS
 		config.qsim().setStartTime(0);
@@ -71,12 +74,6 @@ public class StudyProject_Runner {
 			PlansConfigGroup.HandlingOfPlansWithoutRoutingMode.useMainModeIdentifier);
 		config.routing().setAccessEgressType(
 			RoutingConfigGroup.AccessEgressType.accessEgressModeToLink);
-
-
-		RoutingConfigGroup.TeleportedModeParams transitWalk = new RoutingConfigGroup.TeleportedModeParams("transit_walk");
-		transitWalk.setBeelineDistanceFactor(1.3);
-		transitWalk.setTeleportedModeSpeed(5.0 / 3.6);
-		config.routing().addTeleportedModeParams(transitWalk);
 
 		// 8. SCORING PARAMETERS
 		config.scoring().setLearningRate(1);
@@ -152,8 +149,7 @@ public class StudyProject_Runner {
 
 		// 12. SCENARIO AND CONTROLER SETUP
 		Scenario scenario = ScenarioUtils.loadScenario(config);
-
-// Ensure NetworkRoute is used for car, walk, bike
+		// route factory
 		RouteFactories routeFactories = scenario.getPopulation().getFactory().getRouteFactories();
 		routeFactories.setRouteFactory(NetworkRoute.class, new LinkNetworkRouteFactory());
 
