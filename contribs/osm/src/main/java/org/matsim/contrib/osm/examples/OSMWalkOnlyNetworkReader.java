@@ -15,8 +15,8 @@ import java.util.*;
 public class OSMWalkOnlyNetworkReader {
 
 	public static void main(String[] args) {
-		String osmInput = "study_project/input/mapForP2MATSim_01.pbf";
-		String networkOutput = "study_project/input/network/walk-only-network.xml.gz";
+		String osmInput = "study_project/input/odeonsplatz-münchenerfreiheit-osm-map-01.pbf";
+		String networkOutput = "study_project/input/network/walk-only-network-02.xml.gz";
 
 		CoordinateTransformation transformation =
 			TransformationFactory.getCoordinateTransformation(
@@ -35,11 +35,16 @@ public class OSMWalkOnlyNetworkReader {
 			.setAfterLinkCreated((link, tags, direction) -> {
 				String highway = tags.get("highway");
 				if (highway != null && walkableHighways.contains(highway)) {
-					Set<String> allowedModes = new HashSet<>();
-					allowedModes.add(TransportMode.walk);
+					// Allow only walking
+					Set<String> allowedModes = Set.of(TransportMode.walk);
 					link.setAllowedModes(allowedModes);
+
+					// Set realistic pedestrian link attributes
+					link.setFreespeed(1.4);         // average walking speed in m/s (~5 km/h)
+					link.setCapacity(1800);         // people per hour
+					link.setNumberOfLanes(1.0);     // conceptually 1 lane for walking
 				} else {
-					link.setAllowedModes(Set.of()); // mark as unallowed
+					link.setAllowedModes(Set.of()); // not walkable, will be removed
 				}
 			})
 			.build();
@@ -71,7 +76,6 @@ public class OSMWalkOnlyNetworkReader {
 				nodesToRemove.add(node.getId());
 			}
 		}
-
 		for (Id<Node> nodeId : nodesToRemove) {
 			network.removeNode(nodeId);
 		}
